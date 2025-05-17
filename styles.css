@@ -62,3 +62,9 @@ footer {
   text-align: center;
   font-size: 0.9em;
 }
+
+/*PRODUITS*/
+.produits {
+  background-color: #fdfdfd;
+  padding: 4rem;
+}
