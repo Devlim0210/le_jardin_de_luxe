@@ -39,7 +39,7 @@ nav a:hover {
 /* MAIN */
 main {
   margin: 40px auto;
-  max-width: 800px;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -64,7 +64,71 @@ footer {
 }
 
 /*PRODUITS*/
+
+
 .produits {
   background-color: #fdfdfd;
-  padding: 4rem;
+  padding: 4rem 20px;
+  max-width: 1200px;
+ 
+  margin: auto;
+}
+
+.produits h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.produits p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #B38B6D;
 }
