@@ -132,3 +132,47 @@ footer {
   font-weight: bold;
   color: #B38B6D;
 }
+
+/*AJOUT PRODUITS*/
+.ajouter-produit {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.ajouter-produit h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ajouter-produit form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ajouter-produit label {
+  font-weight: bold;
+}
+
+.ajouter-produit input,
+.ajouter-produit textarea,
+.ajouter-produit button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.ajouter-produit button {
+  background-color: #B38B6D;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ajouter-produit button:hover {
+  background-color: #a1795b;
+}
