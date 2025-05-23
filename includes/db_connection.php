@@ -2,7 +2,8 @@
 $host = 'localhost';
 $dbname = 'le_jardin_de_luxe';
 $user = 'root';
-$pass = ''; 
+$pass = ''; //mot de passe vide par défaut
+
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
