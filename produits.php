@@ -35,7 +35,8 @@ require_once 'includes/db_connection.php';
                   // Afficher la carte produit en HTML
                   echo '<div class="card">';
                   echo '<img src="images/' . htmlspecialchars($produit['image']) . '" alt="' . htmlspecialchars($produit['nom']) . '">';
-                  echo '<h2>' . htmlspecialchars($produit['nom']) . '</h2>';
+                  //echo '<h2>' . htmlspecialchars($produit['nom']) . '</h2>';
+                  echo '<h2><a href="produit.php?id=' . $produit['id'] . '">' . htmlspecialchars($produit['nom']) . '</a></h2>';
                   echo '<p>' . htmlspecialchars($produit['description']) . '</p>';
                   echo '<span class="price">' . number_format($produit['prix'], 2, ',', ' ') . ' €</span>';
                   echo '</div>';
