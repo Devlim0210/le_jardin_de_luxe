@@ -176,3 +176,42 @@ footer {
 .ajouter-produit button:hover {
   background-color: #a1795b;
 }
+
+
+/*fiche -produit*/
+.fiche-produit {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.fiche-produit img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem auto;
+}
+
+.fiche-produit h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.fiche-produit .prix {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8b5e3c;
+  margin-top: 1rem;
+}
+
+.fiche-produit a {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #444;
+  text-decoration: underline;
+}
