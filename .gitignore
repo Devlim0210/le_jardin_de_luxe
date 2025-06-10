@@ -1,0 +1,2 @@
+# Pour que Git ignore toutes les images ajoutées via formulaire automatiquement
+images/*.png
