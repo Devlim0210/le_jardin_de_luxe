@@ -11,10 +11,16 @@
 <?php include 'header.php'; ?>
  
 <!-- Contenu principal -->
-  <main>
+  <main class="accueil">
+    <!-- Section image de couverture + texte centré -->
+ 
     <section class="hero">
+    <img src="images/fond_d_ecran1.jpg" alt="Produits de luxe">
+    <div class="hero-text">
       <h1>Bienvenue sur Le Jardin de Luxe</h1>
       <p>Votre boutique d'articles de luxe de seconde main importés du Japon 🇯🇵</p>
+      <a href="produits.php" class="cta-button">Voir nos produits</a>
+</div>
     </section>
   </main>
 
