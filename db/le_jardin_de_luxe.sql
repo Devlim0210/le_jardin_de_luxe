@@ -40,7 +40,7 @@ CREATE TABLE `produits` (
 -- Déchargement des données de la table `produits`
 --
 
-INSERT DELAYED IGNORE INTO `produits` (`id`, `nom`, `description`, `prix`, `image`, `date_ajout`) VALUES
+INSERT  INTO `produits` (`id`, `nom`, `description`, `prix`, `image`, `date_ajout`) VALUES
 (1, 'sac Dior', 'elegance japonaise', 2000.00, 'tatoo_zeus_barbe.png', '2025-05-23 09:54:07'),
 (2, 'Sac Channel Noir', 'Elegance intemporrelle en cuir', 1500.00, 'sac_channel_noir.jpg', '2025-06-05 09:07:17');
 
