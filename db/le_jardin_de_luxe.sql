@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 11 juin 2025 à 22:50
+-- Généré le : ven. 20 juin 2025 à 11:09
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -24,6 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `date_envoi` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `contact`
+--
+
+INSERT INTO `contact` (`id`, `nom`, `email`, `message`, `date_envoi`) VALUES
+(1, 'mathieu', 'mathieu@gmail.com', 'puvez vous envoyer d&#039;autre photo sur le sac channel noir svp?', '2025-06-19 11:19:14');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `produits`
 --
 
@@ -40,13 +61,20 @@ CREATE TABLE `produits` (
 -- Déchargement des données de la table `produits`
 --
 
-INSERT  INTO `produits` (`id`, `nom`, `description`, `prix`, `image`, `date_ajout`) VALUES
-(1, 'sac Dior', 'elegance japonaise', 2000.00, 'tatoo_zeus_barbe.png', '2025-05-23 09:54:07'),
-(2, 'Sac Channel Noir', 'Elegance intemporrelle en cuir', 1500.00, 'sac_channel_noir.jpg', '2025-06-05 09:07:17');
+INSERT INTO `produits` (`id`, `nom`, `description`, `prix`, `image`, `date_ajout`) VALUES
+(2, 'Sac Chanel Noir', 'Elegance intemporrelle en cuir', 1500.00, 'sac_channel_noir.jpg', '2025-06-19 21:00:52'),
+(3, 'louis vuiton', 'elegance ', 1000.00, 'keepall1.jpg', '2025-06-19 21:01:09'),
+(4, 'Yves Saint Laurent noir', 'Ce sac iconique Saint Laurent en cuir noir lisse se distingue par ses lignes épurées et sa signature YSL en métal argenté. Doté d’une bandoulière chaîne élégante, il peut se porter à l’épaule ou en croisé. Parfait pour sublimer une tenue de jour comme de soirée. Modèle seconde main en excellent état.', 1200.00, 'sac_ysl_noir.jpg', '2025-06-19 20:29:29');
 
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `produits`
@@ -59,10 +87,16 @@ ALTER TABLE `produits`
 --
 
 --
+-- AUTO_INCREMENT pour la table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT pour la table `produits`
 --
 ALTER TABLE `produits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
