@@ -382,16 +382,19 @@ footer {
 .admin-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #9e7c5b;
-  color: white;
+  
+  
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  margin:4px 0;
+  width: 110px;
+  font-size: 0.95rem;
 }
 
 .admin-button:hover {
-  background-color: #7c5f42;
+  background-color:#246b24;
 }
 
 
@@ -444,4 +447,33 @@ footer {
   height: auto;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* === Styles des boutons d'action (Modifier / Supprimer) pour l'admin === */
+/* Bouton Modifier */
+.admin-button.modifier {
+  background-color:#246b24;
+  width: 130px;
+  margin-bottom: 10px;
+}
+
+.admin-button.modifier:hover {
+  background-color: #2c80b4;
+}
+
+/* Bouton Supprimer */
+.admin-button.supprimer {
+  background-color: #e74c3c; /* rouge */
+  width: 130px;
+}
+
+.admin-button.supprimer:hover {
+  background-color: #c0392b;
+}
+.admin-button.modifier,
+.admin-button.supprimer {
+  display: inline-block;
+  text-align: center;
+  color: white;
 }

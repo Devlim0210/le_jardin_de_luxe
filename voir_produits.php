@@ -35,32 +35,32 @@ include 'header.php';
       </thead>
       <tbody>
         <?php
-        try {
-          //  Requête SQL pour récupérer tous les produits
-          $stmt = $pdo->query("SELECT * FROM produits ORDER BY date_ajout DESC");
-          $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
+try {
+    //  Requête SQL pour récupérer tous les produits
+    $stmt = $pdo->query("SELECT * FROM produits ORDER BY date_ajout DESC");
+    $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-          // Boucle pour afficher chaque produit dans le tableau
-          foreach ($produits as $produit) {
-            echo '<tr>';
-            echo '<td>' . $produit['id'] . '</td>';
-            echo '<td>' . htmlspecialchars($produit['nom']) . '</td>';
-            echo '<td>' . htmlspecialchars($produit['description']) . '</td>';
-            echo '<td>' . number_format($produit['prix'], 2, ',', ' ') . ' €</td>';
-            echo '<td><img src="images/' . htmlspecialchars($produit['image']) . '" alt="' . htmlspecialchars($produit['nom']) . '" width="80"></td>';
-             
-            // Colonne Actions : Modifier / Supprimer
-            echo '<td>';
-            echo '<a href="modifier_produit.php?id=' . $produit['id'] . '" class="admin-button">Modifier</a> ';
-            echo '<a href="supprimer_produit.php?id=' . $produit['id'] . '" class="admin-button" onclick="return confirm(\'Supprimer ce produit ?\')">Supprimer</a>';
-            echo '</td>';
-            echo '</tr>';
-          }
-        } catch (PDOException $e) {
-          //  Gestion d'erreur si la requête échoue
-          echo '<tr><td colspan="5">Erreur : ' . $e->getMessage() . '</td></tr>';
-        }
-        ?>
+    // Boucle pour afficher chaque produit dans le tableau
+    foreach ($produits as $produit) {
+        echo '<tr>';
+        echo '<td>' . $produit['id'] . '</td>';
+        echo '<td>' . htmlspecialchars($produit['nom']) . '</td>';
+        echo '<td>' . htmlspecialchars($produit['description']) . '</td>';
+        echo '<td>' . number_format($produit['prix'], 2, ',', ' ') . ' €</td>';
+        echo '<td><img src="images/' . htmlspecialchars($produit['image']) . '" alt="' . htmlspecialchars($produit['nom']) . '" width="80"></td>';
+
+        // Colonne Actions : Modifier / Supprimer
+        echo '<td>';
+        echo '<a href="modifier_produit.php?id=' . $produit['id'] . '" class="admin-button modifier">Modifier</a> ';
+        echo '<a href="supprimer_produit.php?id=' . $produit['id'] . '" class="admin-button supprimer" onclick="return confirm(\'Supprimer ce produit ?\')">Supprimer</a>';
+        echo '</td>';
+        echo '</tr>';
+    }
+} catch (PDOException $e) {
+    //  Gestion d'erreur si la requête échoue
+    echo '<tr><td colspan="5">Erreur : ' . $e->getMessage() . '</td></tr>';
+}
+?>
       </tbody>
     </table>
   </section>
