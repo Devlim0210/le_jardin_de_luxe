@@ -19,9 +19,9 @@
   <p>Gérez ici vos produits et messages.</p>
 
   <section class="admin-actions">
-    <a href="ajouter_produit.php" class="admin-button">➕ Ajouter un produit</a>
-    <a href="voir_produits.php" class="admin-button">📦 Voir tous les produits</a>
-    <a href="contact_admin.php" class="admin-button">📨 Voir les messages reçus</a>
+    <a href="ajouter_produit.php" class="admin-button">Ajouter un produit</a>
+    <a href="voir_produits.php" class="admin-button">Voir tous les produits</a>
+    <a href="contact_admin.php" class="admin-button">Voir les messages reçus</a>
   </section>
 </main>
 

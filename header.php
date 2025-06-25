@@ -10,6 +10,9 @@
 </head>
 <body>
  <header>
+ <div class="header-container">
+    <img src="images/logo_jardin.png" alt="Logo Le Jardin de Luxe" class="logo-header">
+
     <h2>Le Jardin de Luxe</h2>
     <nav>
       <a href="index.php">Accueil</a>
