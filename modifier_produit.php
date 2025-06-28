@@ -9,6 +9,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 }
 
 // On sécurise l'ID en le convertissant en entier
+//Récupération de l'id
 $id = intval($_GET['id']);
 
 // Requête pour récupérer le produit avec cet ID
