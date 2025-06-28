@@ -22,9 +22,10 @@ $cursor = $collection->find([], ['sort' => ['date' => -1]]);
   <meta charset="UTF-8">
   <title>Avis des clients</title>
   <link rel="stylesheet" href="../styles.css">
+
 </head>
 <body>
-<?php include '..//header.php'; ?>
+<?php include '../header.php'; ?>
   <h1>Les avis de nos clients</h1>
 
   <?php foreach ($cursor as $avis): ?>

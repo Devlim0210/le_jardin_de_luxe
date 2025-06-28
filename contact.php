@@ -47,3 +47,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </main>
 
 <?php include 'footer.php'; ?>
+<script>
+  const form = document.querySelector('.formulaire-contact');
+  const nom = document.getElementById('nom');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
+
+  form.addEventListener('submit', function(e) {
+    if (nom.value.trim() === '' || email.value.trim() === '' || message.value.trim() === '') {
+      e.preventDefault();
+      alert('❌ Tous les champs doivent être remplis.');
+    }
+  });
+</script>

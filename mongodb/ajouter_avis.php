@@ -10,12 +10,11 @@
   <title>Laisser un avis</title>
   <link rel="stylesheet" href="../styles.css">
 
+
 </head>
 <body>
-<?php
-// Chemin absolu pour inclure le header
-include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php'; ?>
 
+<?php include '../header.php'; ?>
   <h1>Laissez votre avis</h1>
 
   <!-- Formulaire d'envoi d'avis -->
@@ -28,6 +27,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php'; ?>
 
     <button type="submit">Envoyer</button>
   </form>
-  <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+  <?php include '../footer.php'; ?>
 </body>
 </html>

@@ -1,3 +1,23 @@
+/*========= STYLES GLOBAUX =====*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+
+
+
+
+
 /* ========  RESET DE BASE ==========*/
 * {
     margin: 0;
@@ -6,8 +26,8 @@
   }
 
   /*  ================== STYLE GÉNÉRAL ============*/
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  body {
+    font-family: "Montserrat", sans-serif;
     background-color: #f7f6ed;
     color: #333;
     line-height: 1.6;
@@ -593,4 +613,22 @@ footer {
     overflow-x: auto;
     white-space: nowrap;
   }
+}
+
+
+.header-mongo {
+  background-color: #be3232;
+  border-bottom: 2px solid #000;
+}
+
+.header {
+  background-color: lightblue;
+}
+
+
+/*======== JS CONFIRMATION ==========*/
+.confirmation {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
 }

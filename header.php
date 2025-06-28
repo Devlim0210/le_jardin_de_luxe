@@ -11,14 +11,16 @@
 <body>
  <header>
  <div class="header-container">
-    <img src="images/logo_jardin.png" alt="Logo Le Jardin de Luxe" class="logo-header">
+    <img src="http://localhost:8080/le_jardin_de_luxe/images/logo_jardin.png" alt="Logo Le Jardin de Luxe" class="logo-header">
 
     <h2>Le Jardin de Luxe</h2>
     <nav>
-      <a href="index.php">Accueil</a>
-      <a href="produits.php">Produits</a>
-      <a href="contact.php">Contact</a>
-      <a href="admin.php">Espace admin</a>
+      <a href="http://localhost:8080/le_jardin_de_luxe/index.php">Accueil</a>
+      <a href="http://localhost:8080/le_jardin_de_luxe/produits.php">Produits</a>
+      <a href="http://localhost:8080/le_jardin_de_luxe/contact.php">Contact</a>
+      <a href="http://localhost:8080/le_jardin_de_luxe/admin.php">Espace admin</a>
+      <a href="http://localhost:8000/avis.php">avis</a>
+      <a href="http://localhost:8000/ajouter_avis.php">Donner un avis</a>
 
     </nav>
   </header>
