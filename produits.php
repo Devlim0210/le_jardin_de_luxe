@@ -21,35 +21,35 @@ require_once 'includes/db_connection.php';
     <p>Découvrez notre collection d'articles d'exception.</p>
     <div class="cards">
       <?php
-      try {
-          // Exécuter une requête SQL pour récupérer tous les produits
-          $stmt = $pdo->query("SELECT * FROM produits ORDER BY date_ajout DESC");
+try {
+    // Exécuter une requête SQL pour récupérer tous les produits
+    $stmt = $pdo->query("SELECT * FROM produits ORDER BY date_ajout DESC");
 
-          // Récupérer tous les résultats sous forme de tableau associatif
-          $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // Récupérer tous les résultats sous forme de tableau associatif
+    $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-          // Vérifier s'il y a des produits à afficher
-          if ($produits) {
-              // Boucler sur chaque produit
-              foreach ($produits as $produit) {
-                  // Afficher la carte produit en HTML
-                  echo '<div class="card">';
-                  echo '<img src="images/' . htmlspecialchars($produit['image']) . '" alt="' . htmlspecialchars($produit['nom']) . '">';
-                  //echo '<h2>' . htmlspecialchars($produit['nom']) . '</h2>';
-                  echo '<h2><a href="produit.php?id=' . $produit['id'] . '">' . htmlspecialchars($produit['nom']) . '</a></h2>';
-                  echo '<p>' . htmlspecialchars($produit['description']) . '</p>';
-                  echo '<span class="price">' . number_format($produit['prix'], 2, ',', ' ') . ' €</span>';
-                  echo '</div>';
-              }
-          } else {
-              // Message si aucun produit trouvé
-              echo '<p>Aucun produit disponible pour le moment.</p>';
-          }
-      } catch (PDOException $e) {
-          // Afficher une erreur si la requête échoue
-          echo '<p>Erreur lors de la récupération des produits : ' . $e->getMessage() . '</p>';
-      }
-      ?>
+    // Vérifier s'il y a des produits à afficher
+    if ($produits) {
+        // Boucler sur chaque produit
+        foreach ($produits as $produit) {
+            // Afficher la carte produit en HTML
+            echo '<div class="card">';
+            echo '<img src="images/' . htmlspecialchars($produit['image']) . '" alt="' . htmlspecialchars($produit['nom']) . '">';
+            //echo '<h2>' . htmlspecialchars($produit['nom']) . '</h2>';
+            echo '<h2 class="product-title" style="color:#d4af37; font-weight:700; text-transform:uppercase;"><a href="produit.php?id=' . $produit['id'] . '">' . htmlspecialchars($produit['nom']) . '</a></h2>';
+            echo '<p>' . htmlspecialchars($produit['description']) . '</p>';
+            echo '<span class="price">' . number_format($produit['prix'], 2, ',', ' ') . ' €</span>';
+            echo '</div>';
+        }
+    } else {
+        // Message si aucun produit trouvé
+        echo '<p>Aucun produit disponible pour le moment.</p>';
+    }
+} catch (PDOException $e) {
+    // Afficher une erreur si la requête échoue
+    echo '<p>Erreur lors de la récupération des produits : ' . $e->getMessage() . '</p>';
+}
+?>
     </div>
   </section>
 </main>
