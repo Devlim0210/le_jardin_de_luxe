@@ -23,6 +23,7 @@
       <a href="http://localhost:8000/ajouter_avis.php">Donner un avis</a>
 
     </nav>
+ </div>
   </header>
   </body>
 </html>
